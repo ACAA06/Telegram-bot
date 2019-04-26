@@ -12,7 +12,7 @@ while True:
             except:
                 pass 
             if message=="/start":
-                reply="Hello, "+name+". I'm Poetu Clem😃, the writer in ACAA. You can check his writings here ❄ and you can also get some geek jokes🤡😃.\n\nTo get Clement's writings: \n/Cq-r   (random)\n/Cq-l    (latest)\n/Cq-all (all his writings)\nTo get geek jokes:\n/Geek\nTo get info about Clement:\n/Ps"
+                reply="Hello, "+name+". I'm Poetu Clem😃, the writer in ACAA. You can check his writings here ❄ and you can also get some geek jokes🤡😃.\n\nTo get Clement's writings: \n/Cq_r   (random)\n/Cq_l    (latest)\n/Cq_all (all his writings)\nTo get geek jokes:\n/Geek\nTo get info about Clement:\n/Ps"
             else:
                 reply=process(message,who)
             sendMessage(reply,who)

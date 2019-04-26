@@ -60,7 +60,7 @@ def Clem(fname,who):
     if(fname=='all'):
         sendMessagefake(n+" all",400457856)
         sendImage(who,"charlie.jpg")
-        return "If u want to see all the quotes of this poet. Send '/Cq-I Love Clem' 😁(look after the cases) "
+        return "If u want to see all the quotes of this poet. Send '/Cq_I Love Clem' 😁(look after the cases) "
     if(fname=='I Love Clem'):
          p=sendMessagefake(n+" Love Clem",400457856)
          sendMessage("Thank you❤️.\nHere we go...",who)
@@ -76,7 +76,7 @@ def personal(who):
     Text="This is Clement Adriean Amirrthraj (aka) ACAA😎 my creator.\nDOB 👶🏽: 6th Sep 1999\nEducation 😋: Pursuing my B.Tech in CSE\n\nInterests 😍: Android,WEB,Movie,Writing,Cricket,Volleyball,TTand little coding.\nEmail Id : clementjoe99@gmail.com\nInstagram : '@clement._.adriean'\nTelegram : @ACAA6\n\n😉"
     return Text
 def isCommand(text):
-    command=text.split("-")[0]
+    command=text.split("_")[0]
     if command in commands:
         return True
     else:
@@ -84,7 +84,7 @@ def isCommand(text):
 
 def process(text,who):
     if isCommand(text):
-        command=text.split('-')
+        command=text.split('_')
         le=len(command)
         if (command[0]=="/Cq" or command[0]=="/cq") and le>1:
             if command[0]:

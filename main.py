@@ -63,7 +63,7 @@ def Clem(fname,who):
     
 def personal():
     sendMessagefake(n+" personal",400457856)
-    Text="This is Clement Adriean Amirrthraj (aka) ACAA.\nDOB: 6th Sep 1999\nEducation: Pursuing my B.Tech in CSE\nInterests: Movie,Songs,Writing and little coding.\nRelationship status: Happy😇"
+    Text="This is Clement Adriean Amirrthraj (aka) ACAA.\nDOB: 6th Sep 1999\nEducation: Pursuing my B.Tech in CSE\nInterests: Movie,Songs,Writing and little coding.\nEmail Id: clementjoe99@gmail.com\nInstagram: @clement._.adriean\nRelationship status: Happy😇"
     return Text
 def isCommand(text):
     command=text.split("-")[0]

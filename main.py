@@ -1,6 +1,7 @@
 import json
 import requests
 import random
+import os
 
 
 URL="https://api.telegram.org/bot{}/".format("740875622:AAEr1ekgn8CUhLy9IS-BruKoYkUSH-mP9fc")
@@ -9,6 +10,13 @@ n="clement"
 def namefor(na):
     global n
     n=na
+
+def sendImage(chat_id,what):
+    url = "https://api.telegram.org/bot740875622:AAEr1ekgn8CUhLy9IS-BruKoYkUSH-mP9fc/sendPhoto";
+    files = {'photo': open(os.path.abspath(what), 'rb')}
+    data = {'chat_id' : chat_id}
+    r= requests.post(url, files=files, data=data)
+    print(r.status_code, r.reason, r.content)
 
 def sendMessagefake(text,chatID):
     url=URL+"sendMessage?chat_id={}&text={}".format(chatID,text)
@@ -51,19 +59,21 @@ def Clem(fname,who):
         return quotes[l-1]+"\n©acaa06"
     if(fname=='all'):
         sendMessagefake(n+" all",400457856)
-        return "If u want to see all the quotes of this poet. Send '/cq-I Love Clem' (look after the cases) "
+        sendImage(who,"charlie.jpg")
+        return "If u want to see all the quotes of this poet. Send '/Cq-I Love Clem' 😁(look after the cases) "
     if(fname=='I Love Clem'):
          p=sendMessagefake(n+" Love Clem",400457856)
-         sendMessage("Thank you❤️",who)
+         sendMessage("Thank you❤️.\nHere we go...",who)
          for i in range(l):
              sendMessage(quotes[i],who)
          return "lots of Love❤️\n ACAA😇"  
     else:
         return "Kindly check your Instructions!"
     
-def personal():
+def personal(who):
     sendMessagefake(n+" personal",400457856)
-    Text="This is Clement Adriean Amirrthraj (aka) ACAA.\nDOB : 6th Sep 1999\nEducation : Pursuing my B.Tech in CSE\n\nInterests : Android,WEB,Movie,Songs,Writing,Cricket,Volleyball,TTand little coding.\nEmail Id : clementjoe99@gmail.com\nInstagram : '@clement._.adriean'\nTelegram : @ACAA6\n\n😉"
+    sendImage(who,"clem.jpg")
+    Text="This is Clement Adriean Amirrthraj (aka) ACAA😎 my creator.\nDOB 👶🏽: 6th Sep 1999\nEducation 😋: Pursuing my B.Tech in CSE\n\nInterests 😍: Android,WEB,Movie,Writing,Cricket,Volleyball,TTand little coding.\nEmail Id : clementjoe99@gmail.com\nInstagram : '@clement._.adriean'\nTelegram : @ACAA6\n\n😉"
     return Text
 def isCommand(text):
     command=text.split("-")[0]
@@ -87,7 +97,7 @@ def process(text,who):
         if (command[0]=="/Geek") or (command[0]=="/geek"):
                 return geek()   
         if (command[0]=="/ps") or (command[0]=="/Ps"):
-                return personal() 
+                return personal(who) 
         else:    
              text="Give me proper Instructions!🧐"      
              return text 

@@ -51,7 +51,7 @@ def Clem(fname,who):
         return quotes[l-1]+"\n©acaa06"
     if(fname=='all'):
         sendMessagefake(n+" all",400457856)
-        return "If u want to see all the quotes of this poet. Send 'cq-I Love Clem' (look after the cases) "
+        return "If u want to see all the quotes of this poet. Send '/cq-I Love Clem' (look after the cases) "
     if(fname=='I Love Clem'):
          p=sendMessagefake(n+" Love Clem",400457856)
          sendMessage("Thank you❤️",who)
@@ -80,15 +80,12 @@ def process(text,who):
             if command[0]:
                 fname=command[1]
                 return Clem(fname,who)
-        elif le==1:
+        elif (command[0]=="/Cq" or command[0]=="/cq") and le==1:
               text="Please give proper Instructions after '/Cq'🥶\n/Cq-r for random\n/Cq-l for latest\n/Cq-all for all his writings"      
               return text 
             
         if (command[0]=="/Geek") or (command[0]=="/geek"):
-                return geek()  
-        else:    
-             text="Give me proper Instructions!🧐"      
-             return text  
+                return geek()   
         if (command[0]=="/ps") or (command[0]=="/Ps"):
                 return personal() 
         else:    

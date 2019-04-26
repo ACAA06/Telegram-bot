@@ -92,7 +92,7 @@ def process(text,who):
                 fname=command[1]
                 return Clem(fname,who)
         elif (command[0]=="/Cq" or command[0]=="/cq") and le==1:
-              text="Please give proper Instructions after '/Cq'🥶\n/Cq-r for random\n/Cq-l for latest\n/Cq-all for all his writings"      
+              text="Please give proper Instructions after '/Cq'🥶\n/Cq_r for random\n/Cq_l for latest\n/Cq_all for all his writings"      
               return text 
             
         if (command[0]=="/Geek") or (command[0]=="/geek"):
@@ -100,7 +100,7 @@ def process(text,who):
         if (command[0]=="/ps") or (command[0]=="/Ps"):
                 return personal(who) 
         else:    
-             text="Give me proper Instructions!🧐"      
+             text="Give me proper Instructions dude!🧐"      
              return text 
     else:
         text="Give me proper Instructions!🧐"

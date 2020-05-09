@@ -4,7 +4,7 @@ import random
 import os
 
 
-URL="https://api.telegram.org/bot{}/".format("740875622:AAEr1ekgn8CUhLy9IS-BruKoYkUSH-mP9fc")
+URL="token")
 commands=["/Cq","/cq","/geek","/Geek","/ps","/Ps"]
 n="clement"
 def namefor(na):
@@ -12,7 +12,7 @@ def namefor(na):
     n=na
 
 def sendImage(chat_id,what):
-    url = "https://api.telegram.org/bot740875622:AAEr1ekgn8CUhLy9IS-BruKoYkUSH-mP9fc/sendPhoto";
+    url = "";
     files = {'photo': open(os.path.abspath(what), 'rb')}
     data = {'chat_id' : chat_id}
     r= requests.post(url, files=files, data=data)
